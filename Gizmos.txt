@@ -1,0 +1,26 @@
+clc
+clf
+t=0:0.01:2*%pi;
+Vm=3;
+Vc=3;
+wc=20;
+wm=1;
+m=10;
+vm==Vm*sin(wm*t);
+subplot(3,1,1);
+plot(t,vm);
+xlabel('time');
+ylabel('voltage');
+title('modulating signal');
+vc=Vc*sin(wc*t);
+subplot(3,1,2);
+plot(t,vc);
+xlabel('time');
+ylabel('Amplitude');
+title('Carrier Signal');
+vfm=Vc*sin(wc*t+m*sin(wm*t));
+subplot(3,1,3);
+plot(t,vfm);
+xlabel('time');
+ylabel('Amplitude');
+title('Frequency Modulated Signal');
